@@ -1,0 +1,131 @@
+body{
+    background-color: rgb(241,241,241);
+    width: 100%;
+}
+#topnav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(241,241,241);
+    margin: auto;
+}
+#topnav div:nth-child(1){
+    margin-left: 20px;
+}
+#topnav div:nth-child(2){
+  
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+#topnav div:nth-child(2) a:nth-child(1){
+    color:rgb(239,92,88);
+}
+#topnav div:nth-child(2) a{
+    text-decoration: none;
+    color: rgb(134, 133, 133);
+}
+#topnav div:nth-child(2) div{
+   width: 0.01%;
+   border: 0.01px solid rgb(146, 143, 143);
+}
+#middle-nav{
+   
+    width: 100%;
+   background-color: white;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 0px;
+}
+#middle-nav div{
+ 
+    width: 50%;
+}
+#middle-nav img{
+    margin-left: 10px;
+    width: 30%;
+    
+}
+.search{
+    width: 80%;
+    height: 35px;
+    margin-top: 10px;
+}
+#middle-nav button{
+    width: 15%;
+    height:40px;
+    border: none;
+    background-color:rgb(239,83,78);
+    color: white;
+    border-radius: 5px;
+}
+button:hover{
+    box-shadow: rgba(235, 57, 57, 0.35) 0px 5px 15px;
+}
+.bottom-nav{
+    width: 100%;
+    height: 120px;
+   background-color: white;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    margin: auto;
+    border: 0.5px solid rgb(131, 128, 128);
+    margin-top: 5px;
+    
+    
+}
+.bottom-nav div{
+    width: 80% ;
+    height: 120px;
+    margin: auto;
+    padding-left:5px ;
+    padding-right: 5px;
+  
+  
+    text-align: center;
+   
+
+}
+.bottom-nav div:hover{
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    background-color: rgb(241,241,241);
+  
+    
+}
+
+.bottom-nav img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    margin-bottom: 18px;
+    margin-top: 25px;
+
+    
+}
+.bottom-nav a{
+    text-align: center;
+    text-decoration: none;
+}
+.bottom-nav div a:hover{
+    color: red;
+}
+
+#divshow{
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+#imageshow{
+    width: 95%;
+    margin-left: 30px;
+    margin-right: auto;
+    border-radius: 8px;
+    
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/7290ac8965.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+  <div id="topnav">
+    <div>
+        <i class="fa-duotone fa-location-dot"></i>
+        <span>Select Location </span>
+    </div>
+   <div>
+    <a href="">We're hiring!</a>
+    <div></div>
+    <a href="">How it Works</a>
+    <div></div>
+    <a href="">List Your Business</a>
+    <div></div>
+    <a href="">Login/Sign Up</a>
+   </div>
+
+  </div>
+  <div id="middle-nav">
+    <div>
+        <img src="./logo4.png" alt="">
+    </div>
+    <div>
+        <input type="" placeholder=" Search restaurants,spa,events" class="search">
+        <button>SEARCH</button>
+    </div>
+   
+  </div>
+  <div class="bottom-nav">
+    <div>
+        <img src="https://img4.nbstatic.in/tr:w-/60af2a061e2731000ba1096a.png" alt="">
+        <a href="">Restaurant Deals</a>
+
+    </div>
+    <div>
+        <img src="https://img4.nbstatic.in/tr:w-/639acd9b8db992000bac8a46.png" alt="">
+        <a href="">Buffet Deals</a>
+
+    </div>
+    <div><img src="https://img4.nbstatic.in/tr:w-/60ac96c840e9df000b6cbf94.png" alt="">
+        <a href="">Salon Deals</a>
+
+    </div>
+    <div><img src="https://img4.nbstatic.in/tr:w-/60ac96e240e9df000b6cbf95.png" alt="">
+        <a href="">Spa Deals</a>
+
+    </div>
+    <div><img src="https://img4.nbstatic.in/tr:w-/6201ec623b031b000b53e5b6.png" alt="">
+        <a href="">Activites Deals</a>
+
+    </div>
+    <div><img src="https://img4.nbstatic.in/tr:w-/62d67522edffcc000b060b5c.png" alt="">
+        <a href="">Gift Cards</a>
+
+    </div>
+    <div><img src="https://img4.nbstatic.in/tr:w-/62d6747fb3c621000b6fb633.png" alt="">
+        <a href="">Health</a>
+
+    </div>
+</div>
+<div id="divshow">
+    <img src="" alt="" id="imageshow">
+
+</div>
+<div id="top-brands">
+    <h1>Top Brands</h1>
+</div>
+</body>
+<script>
+    let imgtag=document.getElementById("imageshow")
+   let img=["https://img4.nbstatic.in/tr:w-2800/63c4f59222b317000b619c56.jpg","https://img4.nbstatic.in/tr:w-2800/63b3af1e22b317000c1336a8.jpg","https://img4.nbstatic.in/tr:w-2800/63bfbb0d8db992000b7a17dc.jpg"]
+    let count=0
+    function change(){
+        imgtag.setAttribute("src",img[count])
+        count++
+        if(count==img.length){
+            count=0
+        }
+
+    }
+    setInterval(change,2000)
+
+</script>
+</html>
