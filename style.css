@@ -9,8 +9,10 @@ body{
     background-color: rgb(241,241,241);
     margin: auto;
 }
+
 #topnav div:nth-child(1){
     margin-left: 20px;
+    
 }
 #topnav div:nth-child(2){
   
@@ -69,16 +71,23 @@ button:hover{
     width: 100%;
     height: 120px;
    background-color: white;
-    display: grid;
-    grid-template-columns: repeat(7,1fr);
+
+   
     margin: auto;
     border: 0.5px solid rgb(131, 128, 128);
     margin-top: 5px;
     
     
 }
-.bottom-nav div{
-    width: 80% ;
+.bottom{
+    width:80% ;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+   
+    margin-left: 70px;
+}
+.bottom div{
+    width: 100% ;
     height: 120px;
     margin: auto;
     padding-left:5px ;
@@ -89,7 +98,7 @@ button:hover{
    
 
 }
-.bottom-nav div:hover{
+.bottom div:hover{
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
     background-color: rgb(241,241,241);
   
@@ -128,4 +137,55 @@ button:hover{
     margin-right: auto;
     border-radius: 8px;
     
+}
+#top-brands{
+    width: 100%;
+    margin: auto;
+}
+#top-brands h1{
+   margin-left: 28px;
+}
+
+.top-brand-div{
+    width: 95%;
+    margin: auto;
+    display: flex;
+   
+}
+.top-brand-div img{
+    width: 70%;
+}
+.buffet{
+    width: 100%;
+    margin: auto;
+}
+.buffet h1{
+    margin-left: 28px;
+}
+.buffet-div{
+    width: 75%;
+    display: flex;
+  margin-left: 28px;
+}
+.buffet-div img{
+    width: 85%;
+}
+.divshow-2{
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+#imageshow-2{
+    width: 95%;
+    margin-left: 30px;
+    margin-right: auto;
+    border-radius: 8px;
+    
+}
+#select{
+    border-radius: 10px;
+    width: 42%;
+    height: 25px;
 }
