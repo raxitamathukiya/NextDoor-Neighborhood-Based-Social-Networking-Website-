@@ -200,25 +200,259 @@ button:hover{
 
 #hangdata{
   width:90%;
-  height: 300px;
+    height: 300px;
   display: grid;
   margin: auto;
   grid-template-columns: repeat(6,1fr);
   gap: 10px;
   border-radius: 10px;
-  
-  border-radius: 10px;
+  position: relative;
+ 
+ 
 
 }
 #hangdata div{
-    border: 1px solid black;
+    width: 95%;
+   
     border-radius: 10px;
+   
     
    
 }
-#hangdata img{
-    filter: blur(2px);
-    -webkit-filter: blur(2px);
+#hangdata div img{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    
+    filter: blur(0.8px);
 }
 
+.ofr{
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    top:240px;
+    margin-left: 10px;
+    font-weight: 600;
+ 
+}
+.money{
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    top:220px;
+    margin-left: 10px;
+    font-weight: 600;
+ 
+}
+.add{
+    color: rgb(255,255,255);
+    font-weight: 600;
+    
+    font-size: 18px;
+    position: absolute;
+    top: 200px;
+    margin-left: 8px;
+  
+}
+.new{
+    width: 100%;
+    margin: auto;
+    
+
+}
+.newdiv:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+}
+.new h1{
+    margin-left: 28px;
+}
+.newdiv{
+    width: 25%;
+   
+    margin-left: 30px;
+
+}
+.new div img{
+    width: 100%;
+    border-radius: 10px;
+}
+.swi{
+  
+        font-size: 20px;
+
+        color: rgb(51,51,51);
+        margin-left: 10px;
+       
+    
+}
+.new div :nth-child(3){
+    color:rgb(127,127,127) ;
+    margin-left: 10px;
+    font-size: 19px;
+    
+}
+.new div :nth-child(5){
+   width: 90%;
+   margin-left: 10px;
+    display: flex;
+   
+   height:10px;
+    justify-content: space-between;
+}
+#offer p{
+    color: rgb(90, 88, 88);
+    text-decoration: line-through
+}
+#offer h4{
+    color: rgb(239,83,88);
+   
+}
+.new div :nth-child(6){
+    color: rgb(54,169,84) ;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.Quick{
+    width: 100%;
+    margin: auto;
+}
+.Quick h1{
+    margin-left: 28px;
+}
+#qbites{
+    width: 95%;
+    margin: auto;
+    display: flex;
+}
+#qbites div{
+    width: 30%;
+    margin: auto;
+
+}
+#qbites div img{
+    width: 90%;
+}
+.mind{
+    width: 100%;
+   
+}
+.mind h1{
+    margin-left: 28px;
+}
+#minddiv{
+    width: 95%;
+    display: flex;
+    margin: auto;
+}
+#minddiv div{
+    width: 30%;
+   
+}
+#minddiv div img{
+    width: 90%;
+    border-radius: 10px;
+}
+.divshow-3{
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+#imageshow-3{
+    width: 95%;
+    margin-left: 30px;
+    margin-right: auto;
+    border-radius: 8px;
+    
+}
+.salon{
+    width: 100%;
+}
+.salon h1{
+    margin-left: 28px;
+}
+.salondiv{
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 15px;
+    margin: auto;
+}
+.salondiv img{
+    width: 100%;
+    border-radius: 10px;
+}
+.salondiv p{
+    
+    display: inline-block;
+    margin: 0px;
+    
+}
+.salondiv h2{
+   
+    top: 1px;
+    margin-bottom: 4px;
+}
+.divshow-4{
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+#imageshow-4{
+    width: 95%;
+    margin-left: 30px;
+    margin-right: auto;
+    border-radius: 8px;
+    
+}
+.divshow-5{
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+#imageshow-5{
+    width: 95%;
+    margin-left: 30px;
+    margin-right: auto;
+    border-radius: 8px;
+    
+}
+.footer-1{
+    width: 100%;
+    display: flex;
+    margin-top: 40px;
+   
+    background-color: rgb(51,51,51);
+    color: white;
+    padding-bottom: 20px;
+}
+.footer-1 div:nth-child(1){
+    width: 80%;
+    margin: auto;
+    margin-left: 20px;
+    
+}
+.footer-1 div:nth-child(2){
+    width: 20%;   
+}
+.ptag{
+    font-size: 15px;
+}
+
+.right{
+    
+    margin-left: 40px;
+}
+.social{
+    display: flex;
+   
+   
+}
 
