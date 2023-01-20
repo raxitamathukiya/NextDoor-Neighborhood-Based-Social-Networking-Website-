@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://kit.fontawesome.com/7290ac8965.js" crossorigin="anonymous"></script>
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="ahmdabad.css">
    
 </head>
 <body>
@@ -15,6 +15,7 @@
        <img src="./location.png" alt="">
         <span>Select Location </span>
         <select name="city" id="select" onchange="display()">
+            <option value="Ahmdabad">Ahmdabad</option>
             <option value="New Delhi">New Delhi</option>
             <option value="Gurgoan">Gurgoan</option>
             <option value="Jaipur">Jaipur</option>
@@ -25,7 +26,6 @@
             <option value="Chennai">Chennai</option>
             <option value="Chandigarh">Chandigarh</option>
             <option value="Pune">Pune</option>
-            <option value="Ahmdabad">Ahmdabad</option>
             <option value="Goa">Goa</option>
         </select>
     </div>
@@ -118,8 +118,10 @@
 
 </div>
 <div id="Hangouts">
-    <h1>Popular Hangouts!</h1>
+    <h1>Popular Hangouts</h1>
+    <div id="hangdata"></div>
 </div>
+<h1>Ahmdabad</h1>
 
 </body>
 
@@ -155,6 +157,40 @@
         let select=document.querySelector("select")
         let selectedItem = select.options[select.selectedIndex].value;
         window.location.replace("Ahmdabad.html")
+    }
+    let hangdata=document.getElementById("hangdata")
+    let api="https://63c968fbc3e2021b2d56dfb4.mockapi.io/city"
+    fetchdata()
+    async function fetchdata(){
+       try {
+        let res=await fetch(api)
+        let data=await res.json()
+        display(data)
+       } catch (error) {
+            console.log(error)
+       }
+    }
+    function display(data){
+        data.forEach((element) => {
+            let div=document.createElement("div")
+            
+            
+            let img=document.createElement("img")
+            img.setAttribute("src",element.image)
+            let image=element.image
+            console.log(image)
+             
+             
+     div.style.backgroundImage="url('https://www.livemint.com/rf/Image-621x414/LiveMint/Period1/2013/01/23/Photos/DSC_5534%20--621x414.JPG')"
+            let add=document.createElement("h1")
+            add.innerText=element.Add
+            let ofr=document.createElement("p")
+            ofr.innerText=element.offers+" "+"offers";
+            let money=document.createElement("p")
+            money.innerText="Starting from  $"+element.money
+            div.append(add,ofr,money)
+            hangdata.append(div)
+        });
     }
 
 </script>
