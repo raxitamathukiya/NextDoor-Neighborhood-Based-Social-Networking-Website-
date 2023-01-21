@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmdabad</title>
+    <script src="https://kit.fontawesome.com/7290ac8965.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="salon.css">
+   <style>
+    #offers{
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+       gap: 10px 10px;
+        
+        margin-top: 20px;
+    }
+    #offers div{
+        width: 90%;
+       background-color: white;
+       border-radius: 10px;
+
+    }
+    #offers div img{
+        width: 100%;
+        border-radius: 10px;
+    }
+    #offers div button{
+        width: 50px;
+        border: 0px;
+        background-color: rgb(239,83,88);
+        margin-left: 5px;
+        height: 25px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+
+    }
+    .totaldiv{
+        width: 27%;
+        margin-left:63px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    #total{
+        margin-left: 50px;
+    }
+
+
+   </style>
+   
+</head>
+<body>
+  <div id="topnav">
+    <div>
+       <img src="./location.png" alt="">
+        <span>Select Location </span>
+        <select name="city" id="select" onchange="display()">
+            <option value="Ahmdabad">Ahmdabad</option>
+            <option value="New Delhi">New Delhi</option>
+            <option value="Gurgoan">Gurgoan</option>
+            <option value="Jaipur">Jaipur</option>
+            <option value="Bengaluru">Bengaluru</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Pune">Pune</option>
+            <option value="Goa">Goa</option>
+        </select>
+    </div>
+   <div>
+    <a href="">We're hiring!</a>
+    <div></div>
+    <a href="">How it Works</a>
+    <div></div>
+    <a href="">List Your Business</a>
+    <div></div>
+    <a href="login.html">Login/Sign Up</a>
+   </div>
+
+  </div>
+  <div id="middle-nav">
+    <div>
+        <img src="./logo4.png" alt="">
+    </div>
+    <div>
+        <input type="" placeholder=" Search restaurants,spa,events" class="search">
+        <button>SEARCH</button>
+    </div>
+
+       </div>
+       <div class="totaldiv">
+        <h1>Total:<span id="total">0</span></h1>
+       </div>
+       
+       <div id="offers">
+        
+    </div>
+    </body>
+    <script>
+        let main=document.getElementById("offers")
+        let total=document.getElementById("total")
+        let getdata=JSON.parse(localStorage.getItem("hair"))
+        display(getdata)
+    
+    function display(data){
+        main.innerHTML=""
+        data.forEach((element) => {
+            let div=document.createElement("div")
+            let img=document.createElement("img")
+            img.setAttribute("src",element.hairimg)
+            let name=document.createElement("h2")
+            name.innerText=element.Name
+            let add=document.createElement("p")
+            add.innerText=element.Add
+            let price=document.createElement("p")
+            price.innerText="Starts at ₹"+element.price+" for 1 person"
+            let quantity=document.createElement("span")
+        quantity.innerText=element.quantity
+      let ince=document.createElement("button")
+      ince.innerText="+"
+      let de=document.createElement("button")
+      de.innerText="-"
+      let re=document.createElement("button")
+      re.textContent="Delete"
+
+      re.addEventListener("click", () => {
+            getdata=getdata.filter((ele)=>{
+              return ele.id!==element.id
+            })
+            localStorage.setItem("hair",JSON.stringify(getdata))
+            display(getdata)
+        });
+        ince.addEventListener("click", () => {
+          element=element.quantity++
+          localStorage.setItem("hair",JSON.stringify(getdata))
+          display(getdata)
+        });
+        de.addEventListener("click", () => {
+          if(element.quantity>1){
+            element=element.quantity--
+          localStorage.setItem("hair",JSON.stringify(getdata))
+          display(getdata)
+          }
+        });
+            
+            div.append(img,name,add,price,ince,quantity,de,re)
+            main.append(div)
+        });
+        let sum=0
+      for(let i=0;i<getdata.length;i++){
+        sum+=getdata[i].price*getdata[i].quantity
+      }
+      total.textContent="₹"+sum
+   
+    }
+    
+    </script>
+    </html>

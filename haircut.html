@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmdabad</title>
+    <script src="https://kit.fontawesome.com/7290ac8965.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="ahmdabad.css">
+   <style>
+    #maindiv{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        width: 90%;
+        margin: auto;
+        gap: 25px 10px;
+    }
+    #maindiv div{
+        width: 90%;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        background-color: white;
+        border-radius: 10px;
+
+    }
+    #maindiv div img{
+        width: 100%;
+        border-radius: 10px;
+        
+    }
+    #maindiv div h2{
+        margin-left: 20px;
+        
+    }
+    #maindiv div p{
+        margin-left: 20px;
+        color: rgb(56, 55, 55);
+        
+    }
+    #maindiv div button{
+        width: 80px;
+        height: 35px;
+       margin-left: 130px;
+       margin-bottom: 20px;
+       border: none;
+       background-color: rgb(239,83,78);
+    }
+    .All{
+        margin-left: 60px;
+    }
+    #sort{
+       margin-bottom: 20px; 
+       width: 200px;
+       height: 40px;
+       border-radius: 10px;
+       margin-left: 600px;
+    }
+    #order{
+        text-decoration: none;
+        margin-left: 1000px;
+        color: red;
+        font-size: 25px;
+    }
+    #order:hover{
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    
+   </style>
+   
+</head>
+<body>
+  <div id="topnav">
+    <div>
+       <img src="./location.png" alt="">
+        <span>Select Location </span>
+        <select name="city" id="select" onchange="display()">
+            <option value="Ahmdabad">Ahmdabad</option>
+            <option value="New Delhi">New Delhi</option>
+            <option value="Gurgoan">Gurgoan</option>
+            <option value="Jaipur">Jaipur</option>
+            <option value="Bengaluru">Bengaluru</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Pune">Pune</option>
+            <option value="Goa">Goa</option>
+        </select>
+    </div>
+   <div>
+    <a href="">We're hiring!</a>
+    <div></div>
+    <a href="">How it Works</a>
+    <div></div>
+    <a href="">List Your Business</a>
+    <div></div>
+    <a href="login.html">Login/Sign Up</a>
+   </div>
+
+  </div>
+  <div id="middle-nav">
+    <div>
+        <img src="./logo4.png" alt="">
+    </div>
+    <div>
+        <input type="" placeholder=" Search restaurants,spa,events" class="search">
+        <button>SEARCH</button>
+    </div>
+  </div>
+  <a href="visit.html" id="order">Order List</a>
+  <div>
+    <h2 class="All">All Haircut Offers in Ahmdabad</h2>
+    <select name="salon" id="sort">
+        <option value="">select</option>
+        <option value="Bopal">Bopal</option>
+        <option value="Paldi">Paldi</option>
+        <option value="Gulbai Tekra">Gulbai Tekra</option>
+        <option value="Bodakdev">Bodakdev</option>
+        <option value="Satellite">Satellite</option>
+    </select>
+    <div id="maindiv">
+
+
+    </div>
+</div>
+
+    
+</body>
+<script>
+    let main=document.getElementById("maindiv")
+    let sort=document.getElementById("sort")
+    let api="https://63c968fbc3e2021b2d56dfb4.mockapi.io/quickbites"
+    fetchdata()
+    async function fetchdata(){
+        try {
+            let res=await fetch(api)
+            let data=await res.json();
+           display(data)
+           sortdata(data)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+   let arr=JSON.parse(localStorage.getItem("hair"))||[]
+    function display(data){
+        main.innerHTML=""
+        data.forEach((element) => {
+            let div=document.createElement("div")
+            let img=document.createElement("img")
+            img.setAttribute("src",element.hairimg)
+            let name=document.createElement("h2")
+            name.innerText=element.Name
+            let add=document.createElement("p")
+            add.innerText=element.Add
+            let price=document.createElement("p")
+            price.innerText="Starts at ₹"+element.price+" for 1 person"
+            btn=document.createElement("button")
+            btn.innerText="Add"
+            btn.addEventListener("click",()=>{
+
+            if(checkdata(element)){
+            alert("Already Placed Order")
+            }
+            else{
+            arr.push({...element,quantity:1})
+            localStorage.setItem("hair",JSON.stringify(arr)) 
+            alert("successfully done")
+            }   
+            })
+            div.append(img,name,add,price,btn)
+            main.append(div)
+        });
+    }
+    function checkdata(element){
+      for(let i=0;i<arr.length;i++){
+        if(arr[i].id===element.id){
+          return true
+        }
+      } 
+      return false
+    }
+    function sortdata(data){
+        sort.addEventListener("change",(e)=>{
+            e.preventDefault()
+            if(sort.value==""){
+            display(data)
+        }else{
+            let filterdata=data.filter((el)=>{
+                if(el.Add==sort.value){
+                    return true
+                }else{
+                    return false
+                }
+            })
+            display(filterdata)
+        }
+        })
+        
+    }
+
+</script>
+</html>
