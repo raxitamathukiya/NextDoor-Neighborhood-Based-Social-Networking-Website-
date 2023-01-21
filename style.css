@@ -189,3 +189,96 @@ button:hover{
     width: 42%;
     height: 25px;
 }
+.footer-1{
+    width: 100%;
+    display: flex;
+    margin-top: 40px;
+   
+    background-color: rgb(51,51,51);
+    color: white;
+    padding-bottom: 20px;
+}
+.footer-1 div:nth-child(1){
+    width: 80%;
+    margin: auto;
+    margin-left: 20px;
+    
+}
+.footer-1 div:nth-child(2){
+    width: 20%;   
+}
+.ptag{
+    font-size: 15px;
+}
+
+.right{
+    
+    margin-left: 40px;
+}
+.social{
+    display: flex;
+   
+   
+}
+.footer-2{
+    width: 100%;
+    display: flex;
+    border: 1px solid black;
+    background-color: black;
+}
+.left-2{
+    width: 30%;
+   display: flex;
+    
+    justify-content: space-between;
+    color: white;
+    margin-left: 25px;
+}
+.right-2{
+    width: 35%; 
+    
+    color: white;
+    margin-left: 300px;
+}
+.leftdiv1{
+    display: grid;
+    grid-template-columns: repeat(1,fr);
+   
+}
+.leftdiv2{
+    display: grid;
+    grid-template-columns: repeat(1,fr);
+    
+}
+.leftdiv1 a{
+    text-decoration: none;
+    color: white;
+}
+.leftdiv2 a{
+    text-decoration: none;
+    color: white;
+   
+}
+.rightdiv{
+   
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+}
+.rightdiv img{
+    width: 100%;
+   
+}
+.rightdiv div{
+
+    width: 50%;
+    margin: 0px;
+}
+.rightdiv h3{
+    margin-left: 30px;
+   
+}
+.leftdiv2 p{
+    
+    color: rgb(80, 79, 79);
+}
