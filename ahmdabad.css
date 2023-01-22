@@ -234,20 +234,22 @@ button:hover{
     top:240px;
     margin-left: 10px;
     font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
  
 }
 .money{
-    color: white;
+    color:white;
     font-size: 18px;
     position: absolute;
     top:220px;
     margin-left: 10px;
     font-weight: 600;
- 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .add{
-    color: rgb(255,255,255);
+    color: white;
     font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
     font-size: 18px;
     position: absolute;
