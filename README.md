@@ -1,5 +1,6 @@
 # NextDoor
 Description:The NextDoor-Inspired City Services Website is an online platform designed to connect local businesses and service providers with residents in specific cities or neighborhoods. The website aims to facilitate community engagement, support local businesses, and provide users with a convenient way to discover and access various services within their area.
+
 Netlify_Link: https://shiny-souffle-bfa384.netlify.app/
 
 You can see the landing page screenshot below
